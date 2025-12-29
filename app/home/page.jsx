@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 export default function Page() {
   const [list, setList] = useState(1);
+  const router=useRouter();
   return (
     <>
       {/* TOP SECTION */}
@@ -22,7 +24,7 @@ export default function Page() {
         {/* LOCATION */}
         <div className="flex flex-col gap-1">
           <span className="text-[12px] text-[#A2A2A2]">Location</span>
-          <div className="flex justify-between items-center">
+          <div className="flex items-center">
             <h2 className="text-[14px] font-semibold text-[#D8D8D8]">
               Bilzen, Tanjungbalai
             </h2>
@@ -117,14 +119,27 @@ export default function Page() {
 
           <div className="w-full grid grid-cols-2 gap-3.75 mb-19">
             {/* card1 */}
-            <div className="max-w-39 w-full p-2 bg-[#FFFFFF]">
-              <div className="w-full">
+            <div
+              onClick={() => router.push("/detail")}
+              className="max-w-39 w-full p-2 bg-[#FFFFFF] cursor-pointer"
+            >
+              <div className="w-full relative">
                 <Image
                   src="/coffee1.png"
                   width={140}
                   height={128}
                   alt="coffee1"
                 />
+                <div
+                  className="absolute top-0 flex justify-center gap-1 items-center  right-0 h-7 rounded-tr-xl rounded-bl-3xl  max-w-12.75 w-full "
+                  style={{
+                    background:
+                      "linear-gradient(240.86deg, rgba(17, 17, 17, 0.3) 0%, rgba(49, 49, 49, 0.3) 100%)",
+                  }}
+                >
+                  <Image src="/Star.png" alt="star" height={12} width={12} />
+                  <p className="text-[8px] font-semibold text-white">4.8</p>
+                </div>
               </div>
               <div className="w-full flex flex-col gap-2">
                 <div className="max-w-25.75 w-full flex flex-col gap-1">
@@ -145,7 +160,10 @@ export default function Page() {
             </div>
 
             {/* card2 */}
-            <div className=" max-w-39 w-full p-2 bg-[#FFFFFF]">
+            <div
+              onClick={() => router.push("/detail")}
+              className="cursor-pointer max-w-39 w-full p-2 bg-[#FFFFFF]"
+            >
               <div className="w-full relative">
                 <Image
                   src="/coffee2.png"
@@ -183,14 +201,27 @@ export default function Page() {
             </div>
 
             {/* card3 */}
-            <div className="max-w-39 w-full p-2 bg-[#FFFFFF]">
-              <div className="w-full">
+            <div
+              onClick={() => router.push("/detail")}
+              className="max-w-39 w-full p-2 bg-[#FFFFFF] cursor-pointer"
+            >
+              <div className="w-full relative">
                 <Image
                   src="/coffee1.png"
                   width={140}
                   height={128}
                   alt="coffee1"
                 />
+                <div
+                  className="absolute top-0 flex justify-center gap-1 items-center  right-0 h-7 rounded-tr-xl rounded-bl-3xl  max-w-12.75 w-full "
+                  style={{
+                    background:
+                      "linear-gradient(240.86deg, rgba(17, 17, 17, 0.3) 0%, rgba(49, 49, 49, 0.3) 100%)",
+                  }}
+                >
+                  <Image src="/Star.png" alt="star" height={12} width={12} />
+                  <p className="text-[8px] font-semibold text-white">4.8</p>
+                </div>
               </div>
               <div className="w-full flex flex-col gap-2">
                 <div className="max-w-25.75 w-full flex flex-col gap-1">
@@ -211,14 +242,27 @@ export default function Page() {
             </div>
 
             {/* card4 */}
-            <div className="max-w-39 w-full p-2 bg-[#FFFFFF]">
-              <div className="w-full">
+            <div
+              onClick={() => router.push("/detail")}
+              className="max-w-39 w-full p-2 bg-[#FFFFFF] cursor-pointer"
+            >
+              <div className="w-full relative">
                 <Image
                   src="/coffee1.png"
                   width={140}
                   height={128}
                   alt="coffee1"
                 />
+                <div
+                  className="absolute top-0 flex justify-center gap-1 items-center  right-0 h-7 rounded-tr-xl rounded-bl-3xl  max-w-12.75 w-full "
+                  style={{
+                    background:
+                      "linear-gradient(240.86deg, rgba(17, 17, 17, 0.3) 0%, rgba(49, 49, 49, 0.3) 100%)",
+                  }}
+                >
+                  <Image src="/Star.png" alt="star" height={12} width={12} />
+                  <p className="text-[8px] font-semibold text-white">4.8</p>
+                </div>
               </div>
               <div className="w-full flex flex-col gap-2">
                 <div className="max-w-25.75 w-full flex flex-col gap-1">

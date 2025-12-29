@@ -1,7 +1,11 @@
+"use client"
+
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import React from "react";
 
 export default function Onboard() {
+  const router = useRouter();
   return (
     <section className="max-w-93.75 w-full mx-auto">
       <div className="w-full h-134">
@@ -34,7 +38,10 @@ export default function Onboard() {
           </p>
         </div>
         <div className="max-w-81.75 w-full mx-auto pt-8">
-          <button className="w-full bg-[#C67C4E] font-semibold text-[16px] rounded-2xl py-4 px-5 text-white">
+          <button
+            onClick={() => router.push("/home")}
+            className="w-full bg-[#C67C4E] font-semibold text-[16px] rounded-2xl py-4 px-5 text-white"
+          >
             Get Started
           </button>
         </div>
