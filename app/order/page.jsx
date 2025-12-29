@@ -76,7 +76,7 @@ export default function page() {
 
           <div className="max-w-57.25 w-full flex justify-between items-center">
             <button className="w-30 border border-[#A2A2A2] bg-white py-1.5 px-3 rounded-2xl flex justify-between items-center">
-              <Image src="/edit.png" width={14} height={14} alt="edit" />
+              <Image src="/Edit.png" width={14} height={14} alt="edit" />
               <h4 className="text-[12px] text-[#313131]">Edit Address</h4>
             </button>
             <button className="w-25.25 border border-[#A2A2A2] bg-white py-1.5 px-3 rounded-2xl flex justify-between items-center">
