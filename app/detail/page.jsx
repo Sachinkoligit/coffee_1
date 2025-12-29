@@ -8,10 +8,10 @@ export default function page() {
   const router = useRouter();
   const [text, setText] = useState(true);
   return (
-    <div className="max-w-93.75 w-full mx-auto">
+    <div className="max-w-93.75 w-full mx-auto bg-[#F9F9F9]">
       <section className="max-w-93.75 w-full p-4 flex flex-col gap-4">
         <div className="w-full flex flex-col gap-6">
-          <header className="w-full flex justify-between items-center">
+          <header className="w-full max-w-93.75 flex justify-between items-center  fixed top-0 left-1/2 -translate-x-1/2 z-50 p-4">
             <span className="text-[#242424]">9:41</span>
             <div className="flex gap-2 items-center text-[#242424]">
               <Image src="/signal1.png" width={17} height={10} alt="signal" />
@@ -20,8 +20,11 @@ export default function page() {
             </div>
           </header>
 
-          <div className="w-full flex justify-between items-center">
-            <button className="w-11 h-11 p-2.5">
+          <div className="w-full flex justify-between mt-12 items-center">
+            <button
+              onClick={() => router.push("/home")}
+              className="w-11 h-11 p-2.5"
+            >
               <Image
                 src="/arrowLeft.png"
                 width={15.5}
@@ -140,13 +143,13 @@ export default function page() {
             <div className="w-full flex flex-col gap-4">
               <h2 className="text-[16px] font-semibold text-[#242424]">Size</h2>
               <div className="w-full flex justify-between items-center">
-                <button className="p-6 rounded-xl w-24 h-10.25 flex justify-center items-center  border border-[#E3E3E3]">
+                <button className="p-6 rounded-xl w-24 h-10.25 flex justify-center items-center bg-white  border border-[#E3E3E3]">
                   S
                 </button>
                 <button className="p-6 rounded-xl w-24 h-10.25 flex justify-center items-center bg-[#F9F2ED]  border border-[#C67C4E]">
                   M
                 </button>
-                <button className="p-6 rounded-xl w-24 h-10.25 flex justify-center items-center  border border-[#E3E3E3]">
+                <button className="p-6 rounded-xl w-24 h-10.25 flex justify-center items-center bg-white  border border-[#E3E3E3]">
                   L
                 </button>
               </div>

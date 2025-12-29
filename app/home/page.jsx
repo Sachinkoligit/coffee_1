@@ -6,13 +6,13 @@ import React, { useState } from "react";
 
 export default function Page() {
   const [list, setList] = useState(1);
-  const router=useRouter();
+  const router = useRouter();
   return (
     <>
       {/* TOP SECTION */}
       <section className="relative max-w-93.75 h-70 w-full bg-linear-to-tr from-[#313131] to-[#111111] mx-auto p-4 flex flex-col gap-6">
         {/* STATUS BAR */}
-        <header className="w-full flex justify-between items-center">
+        <header className="w-full  p-4 max-w-93.75 flex justify-between items-center fixed top-0 left-1/2 -translate-x-1/2 z-50">
           <span className="text-white">9:41</span>
           <div className="flex gap-2 items-center">
             <Image src="/signal.png" width={17} height={10} alt="signal" />
@@ -22,7 +22,7 @@ export default function Page() {
         </header>
 
         {/* LOCATION */}
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 mt-12">
           <span className="text-[12px] text-[#A2A2A2]">Location</span>
           <div className="flex items-center">
             <h2 className="text-[14px] font-semibold text-[#D8D8D8]">
@@ -285,7 +285,9 @@ export default function Page() {
 
           {/* footer */}
           <div className="max-w-93.75 w-full bg-[#FFFFFF] p-6 flex justify-evenly items-center fixed left-1/2 -translate-x-1/2 bottom-0">
-            <Image src="/Home.png" width={24} height={24} alt="home" />
+            <button onClick={() => router.push("/")}>
+              <Image src="/Home.png" width={24} height={24} alt="home" />
+            </button>
             <Image src="/heart.png" width={24} height={24} alt="left" />
             <Image src="/bag.png" width={24} height={24} alt="left" />
             <Image src="/bell.png" width={24} height={24} alt="left" />
